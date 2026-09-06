@@ -1,3 +1,4 @@
+from keep_alive import keep_alive
 import os, sqlite3
 from datetime import datetime, timezone, timedelta
 from dotenv import load_dotenv
@@ -362,4 +363,5 @@ async def reminder_loop():
 # ✅ เริ่มต้นแพลตฟอร์ม
 if __name__ == "__main__":
     init_db()
+    keep_alive()
     bot.run(os.getenv("DISCORD_TOKEN"))
