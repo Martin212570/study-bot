@@ -364,7 +364,6 @@ if __name__ == "__main__":
     print("กำลังเริ่มเชื่อมต่อ Discord...")
     init_db()
     # ดึงค่าจาก .env เป็นหลัก หากไม่เจอจะใช้ Token สำรองตรงนี้
-token = os.getenv("DISCORD_TOKEN")
-if not token:
-    raise RuntimeError("❌ ตั้งค่า DISCORD_TOKEN ก่อนรัน")
+    token = os.getenv("DISCORD_TOKEN") or "MTU0NTc0NzU1ODIzNDcyNjUxMg.GWIFXd.EoRd1N8Li34gwytzBaA6Ua9-7QS7Myc5mKXCIw"
+    bot.run(token)r("❌ ตั้งค่า DISCORD_TOKEN ก่อนรัน")
 bot.run(token)
