@@ -362,5 +362,4 @@ async def reminder_loop():
 # ✅ เริ่มต้นแพลตฟอร์ม
 if __name__ == "__main__":
     init_db()
-    keep_alive()
     bot.run(os.getenv("DISCORD_TOKEN"))
